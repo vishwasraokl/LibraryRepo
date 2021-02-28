@@ -33,6 +33,7 @@ namespace LibraryApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LibraryApi", Version = "v1" });
             });
         }
+        //services.AddDbContext<LibraryDataContext>(op => op.UseSqlServer(Configuration.GetConnectionString("LibraryDataContext")));
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
