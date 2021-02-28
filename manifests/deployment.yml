@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vishwasraokllibraryrepo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vishwasraokllibraryrepo
+  template:
+    metadata:
+      labels:
+        app: vishwasraokllibraryrepo 
+    spec:
+      containers:
+        - name: vishwasraokllibraryrepo 
+          image: vishlibrary.azurecr.io/vishwasraokllibraryrepo
+          ports:
+          - containerPort: 80
